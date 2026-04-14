@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#cc0000" />
+  <title>图鉴收藏 — PokeMe</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+  <a class="logo" href="/">Poke<span>Me</span></a>
+  <nav>
+    <a href="/">扫描</a>
+    <a href="/collection">图鉴</a>
+    <a href="/chat">聊天</a>
+  </nav>
+</nav>
+
+<!-- 收藏页 -->
+<main class="collection-page">
+
+  <div class="collection-header">
+    <div class="collection-title">我的图鉴</div>
+    <div class="collection-count" id="total-count">加载中...</div>
+  </div>
+
+  <!-- 分类筛选 -->
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-category="">全部</button>
+    <button class="filter-btn" data-category="哺乳动物">哺乳动物</button>
+    <button class="filter-btn" data-category="鸟类">鸟类</button>
+    <button class="filter-btn" data-category="昆虫">昆虫</button>
+    <button class="filter-btn" data-category="爬行动物">爬行动物</button>
+    <button class="filter-btn" data-category="鱼类">鱼类</button>
+    <button class="filter-btn" data-category="两栖动物">两栖动物</button>
+    <button class="filter-btn" data-category="其他">其他</button>
+  </div>
+
+  <!-- 图鉴网格 -->
+  <div class="grid" id="collection-grid">
+    <div style="color:#666;padding:20px">加载中...</div>
+  </div>
+
+</main>
+
+<!-- 图鉴卡片遮罩（与扫描页相同结构） -->
+<div class="card-overlay" id="card-overlay">
+  <div class="pokedex-card" id="pokedex-card">
+
+    <!-- 语音播报按钮 -->
+    <button class="narration-btn" id="narration-btn" title="语音播报">🔊</button>
+
+    <div class="card-header">
+      <img class="card-photo" id="card-photo" src="" alt="" />
+      <div class="card-title">
+        <div class="card-number" id="card-number">#0000</div>
+        <div class="card-name"  id="card-name">—</div>
+        <div class="card-scientific" id="card-scientific"></div>
+        <span class="rarity-badge" id="rarity-badge">普通</span>
+      </div>
+    </div>
+
+    <hr class="card-divider" />
+
+    <div class="card-stats">
+      <div class="stat-item">
+        <div class="stat-label">体型</div>
+        <div class="stat-value" id="stat-height">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">体重</div>
+        <div class="stat-value" id="stat-weight">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">栖息地</div>
+        <div class="stat-value" id="stat-habitat">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">食性</div>
+        <div class="stat-value" id="stat-diet">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">天敌</div>
+        <div class="stat-value" id="stat-predator">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">保护状态</div>
+        <div class="stat-value" id="stat-conservation">—</div>
+      </div>
+    </div>
+
+    <hr class="card-divider" />
+
+    <div class="card-description" id="card-description"></div>
+
+    <div class="attributes" id="card-attributes"></div>
+
+    <button class="close-btn" id="close-card-btn">关闭</button>
+
+  </div>
+</div>
+
+<script src="/static/js/narration.js"></script>
+<script src="/static/js/collection.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#cc0000" />
+  <title>聊天 — PokeMe</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="logo" href="/">Poke<span>Me</span></a>
+  <nav>
+    <a href="/">扫描</a>
+    <a href="/collection">图鉴</a>
+    <a href="/chat">聊天</a>
+  </nav>
+</nav>
+
+<div class="chat-page">
+  <div class="chat-header">
+    <div class="chat-avatar">🦉</div>
+    <div>
+      <div class="chat-title">图图</div>
+      <div class="chat-subtitle">动物图鉴 AI 助手</div>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-bubble assistant">
+      <div class="bubble-content">你好！我是图图 🦉，动物图鉴的 AI 助手。<br>想了解什么动物？尽管问我！</div>
+    </div>
+  </div>
+
+  <div class="chat-input-bar">
+    <input
+      type="text"
+      id="chat-input"
+      class="chat-input"
+      placeholder="问问图图…"
+      maxlength="500"
+      autocomplete="off"
+    />
+    <button class="chat-mic-btn" id="chat-mic-btn" aria-label="语音输入">🎤</button>
+    <button class="chat-send-btn" id="chat-send-btn" aria-label="发送">➤</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+<script src="/static/js/chat.js"></script>
+</body>
+</html>
