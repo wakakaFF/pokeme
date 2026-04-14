@@ -115,8 +115,43 @@
   </div>
 </div>
 
+<!-- 语音助手 -->
+<div class="voice-indicator" id="voice-indicator">
+  <span class="voice-dot" id="voice-dot"></span>
+  <span class="voice-hint" id="voice-hint">说「图图」唤醒</span>
+</div>
+
+<div class="voice-backdrop" id="voice-backdrop"></div>
+<div class="voice-sheet" id="voice-overlay">
+  <div class="voice-sheet-handle"></div>
+  <div class="voice-sheet-header">
+    <div class="voice-sheet-title">
+      <span class="voice-avatar">🐾</span>
+      <span>图图语音助手</span>
+    </div>
+    <button class="voice-close-btn" id="voice-close-btn">✕</button>
+  </div>
+
+  <!-- 唤醒后等待提问 -->
+  <div class="voice-listening" id="voice-listening">
+    <div class="voice-listen-waves">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="voice-listen-tip">我在听，请说出你的问题</div>
+    <div class="voice-interim" id="voice-interim"></div>
+  </div>
+
+  <!-- 提问 + 回答 -->
+  <div class="voice-qa" id="voice-qa">
+    <div class="voice-question" id="voice-question"></div>
+    <div class="voice-status" id="voice-status"></div>
+    <div class="voice-bubble" id="voice-bubble"></div>
+  </div>
+</div>
+
 <script src="/static/js/narration.js"></script>
 <script src="/static/js/camera.js"></script>
 <script src="/static/js/scanner.js"></script>
+<script src="/static/js/voice_assistant.js"></script>
 </body>
 </html>
